@@ -254,12 +254,20 @@ Foram executados 4 cenários experimentais com $N = 20$ requisições cada: 3 ex
 
 ### Tabela Comparativa de Resultados
 
-| Protocolo | Taxa de Perda | Tempo Total (ms) | RTT Médio (ms) | RTT Máximo (ms) | Retransmissões | Requisições Perdidas |
+| Protocolo | Taxa de Perda | Tempo Total | RTT Médio (ms) | RTT Máximo (ms) | Retransmissões | Requisições Perdidas |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **UDP** | 0% | 5.451 ms | 0.225 ms | 0.573 ms | 0 | 0 |
-| **UDP** | 10% | 1508.321 ms | 0.220 ms | 0.869 ms | 3 | 0 |
-| **UDP** | 30% | 2514.947 ms | 0.360 ms | 1.067 ms | 5 | 0 |
-| **TCP** | N/A | 2.595 ms | 0.099 ms | 0.157 ms | N/A (0 na aplicação) | 0 |
+| **UDP** | 0% | 0.005 s (5.451 ms) | 0.225 ms | 0.573 ms | 0 | 0 |
+| **UDP** | 10% | 1.508 s (1508.321 ms) | 0.220 ms | 0.869 ms | 3 | 0 |
+| **UDP** | 30% | 2.515 s (2514.947 ms) | 0.360 ms | 1.067 ms | 5 | 0 |
+| **TCP** | N/A | 0.003 s (2.595 ms) | 0.099 ms | 0.157 ms | N/A (0 na aplicação) | 0 |
+
+### Grade Específica das Execuções UDP
+
+| Taxa de Perda | Tempo total (s) | RTT médio (ms) | Retransmissões | Perdidas definitivamente |
+| :---: | :---: | :---: | :---: | :---: |
+| **0%** | 0.005 s | 0.225 ms | 0 | 0 |
+| **10%** | 1.508 s | 0.220 ms | 3 | 0 |
+| **30%** | 2.515 s | 0.360 ms | 5 | 0 |
 
 ---
 
