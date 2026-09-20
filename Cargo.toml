@@ -1,0 +1,36 @@
+[package]
+name = "trab1-SD"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand = "0.10.3"
+prost = "0.13"
+prost-types = "0.13"
+
+[build-dependencies]
+prost-build = "0.13"
+
+[[bin]]
+name = "server"
+path = "src/tcp-server.rs"
+
+[[bin]]
+name = "client"
+path = "src/tcp-client.rs"
+
+[[bin]]
+name = "server-udp"
+path = "src/udp-server.rs"
+
+[[bin]]
+name = "client-udp"
+path = "src/udp-client.rs"
+
+[[bin]]
+name = "server-proto"
+path = "src/proto-server.rs"
+
+[[bin]]
+name = "client-proto"
+path = "src/proto-client.rs"

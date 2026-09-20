@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package calculator;
+
+enum Operation {
+  ADD = 0;
+  SUB = 1;
+  MUL = 2;
+  DIV = 3;
+}
+
+message CalcRequest {
+  uint32 sequence = 1;
+  double operand1 = 2;
+  Operation op = 3;
+  double operand2 = 4;
+}
+
+message CalcResponse {
+  uint32 sequence = 1;
+  oneof result_or_error {
+    double result = 2;
+    string error = 3;
+  }
+}
